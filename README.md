@@ -115,3 +115,14 @@
 
 - **Error Trigger** — запуск при ошибках исполнения.
 - Параметр **Continue On Fail** (в настройках узла) — не останавливать поток при сбое.
+
+---
+
+### Туннельный запуск в docker
+
+```bash
+docker run -it \
+  -p 5678:5678 \
+  -e N8N_TUNNEL_SUBDOMAIN=mybot \
+  n8nio/n8n start --tunnel
+```
